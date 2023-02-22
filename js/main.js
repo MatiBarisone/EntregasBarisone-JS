@@ -28,7 +28,7 @@ function renderizarProductos(productos){
 
         const precio = document.createElement("p");
         precio.className = "card-text text-wrap";
-        precio.innerHTML = `AR$ $${new Intl.NumberFormat('es-MX').format(producto.precio)}`;
+        precio.innerHTML = `AR$ ${new Intl.NumberFormat('es-MX').format(producto.precio)}`;
 
         const boton = document.createElement("a");
         boton.className= "btn btn-sm btn-outline-secondary";
@@ -61,7 +61,7 @@ function renderizarCarrito(productos){
         tdNombre.innerHTML = `${producto.nombre}`;
 
         const tdPrecio = document.createElement("td");
-        tdPrecio.innerHTML = `AR$ $${new Intl.NumberFormat('es-MX').format(producto.precio)}`;
+        tdPrecio.innerHTML = `AR$ ${new Intl.NumberFormat('es-MX').format(producto.precio)}`;
 
         const tdAcciones = document.createElement("td");
         const botonEliminarProducto = document.createElement("button");
@@ -89,7 +89,7 @@ function renderizarTotal(productos){
     productos.forEach( producto => {
         total += producto.precio;
     })
-    tdTotal.innerHTML = `AR$ $${new Intl.NumberFormat('es-MX').format(total)}`;
+    tdTotal.innerHTML = `AR$ ${new Intl.NumberFormat('es-MX').format(total)}`;
     tdTotal.className = "fs-2"
     bodyTotal.append(tdTotal);
 }
@@ -166,7 +166,7 @@ const listaDeProductos = [
     {
         img: "img/zapatilla2.svg",
         id:6, 
-        nombre:"Adidas x Dragon Ball Freezer Editio", 
+        nombre:"Adidas x DragonBall Freezer Edition", 
         precio:75500
     },
     {
@@ -178,22 +178,21 @@ const listaDeProductos = [
     {
         img: "img/zapatilla3.svg",
         id:7, 
-        nombre:"Adidas x Dragon Ball Son Gohan Edition", 
+        nombre:"Adidas x DragonBall Son Gohan Edition", 
         precio:80999
     },
     {
         img: "img/zapatilla5.svg",
         id:5, 
-        nombre:"Adidas x Dragon Ball Son Goku Edition", 
+        nombre:"Adidas x DragonBall Son Goku Edition", 
         precio:75500
     },
     {
         img: "img/zapatilla4.svg",
         id:8, 
-        nombre:"Adidas x Dragon Ball Shenron Edition", 
+        nombre:"Adidas x DragonBall Shenron Edition", 
         precio:76600
     },
-
 ];
 
 const carrito = obtenerCarrito();
