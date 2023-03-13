@@ -240,8 +240,6 @@ formularioBuscarProductos.addEventListener("submit", (event) => {
     const palabraABuscar = inputNombreBuscado.value;
     inputNombreBuscado.value = "";
 
-    console.log(palabraABuscar);
-
     const productosFiltrados = listaDeProductos.filter( (producto) => {
         return producto.nombre.toLowerCase().includes(palabraABuscar.toLowerCase());
     });
